@@ -1,0 +1,871 @@
+--- SINGLE PROMPT ---
+{
+  "classes": [
+    {
+      "name": "customer"
+    },
+    {
+      "name": "product"
+    },
+    {
+      "name": "shoppingCart"
+    },
+    {
+      "name": "order"
+    },
+    {
+      "name": "address"
+    },
+    {
+      "name": "shippingMethod"
+    },
+    {
+      "name": "discount"
+    },
+    {
+      "name": "paymentDetail"
+    },
+    {
+      "name": "orderConfirmation"
+    },
+    {
+      "name": "orderStatus"
+    },
+    {
+      "name": "returnOrExchange"
+    },
+    {
+      "name": "customerServiceRepresentative"
+    },
+    {
+      "name": "warehouseStaff"
+    },
+    {
+      "name": "shippingDepartmentStaff"
+    },
+    {
+      "name": "financeDepartmentStaff"
+    },
+    {
+      "name": "manager"
+    },
+    {
+      "name": "administrator"
+    },
+    {
+      "name": "invoice"
+    },
+    {
+      "name": "financialReport"
+    },
+    {
+      "name": "orderFeedback"
+    },
+    {
+      "name": "userRole"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "customer",
+      "name": "browses",
+      "target": "product"
+    },
+    {
+      "source": "customer",
+      "name": "searches",
+      "target": "product"
+    },
+    {
+      "source": "customer",
+      "name": "addsToCart",
+      "target": "product"
+    },
+    {
+      "source": "customer",
+      "name": "viewsAndEdits",
+      "target": "shoppingCart"
+    },
+    {
+      "source": "customer",
+      "name": "proceedsToCheckout",
+      "target": "order"
+    },
+    {
+      "source": "order",
+      "name": "hasShippingAddress",
+      "target": "address"
+    },
+    {
+      "source": "order",
+      "name": "usesShippingMethod",
+      "target": "shippingMethod"
+    },
+    {
+      "source": "order",
+      "name": "appliesDiscount",
+      "target": "discount"
+    },
+    {
+      "source": "order",
+      "name": "containsPaymentDetail",
+      "target": "paymentDetail"
+    },
+    {
+      "source": "order",
+      "name": "sendsConfirmation",
+      "target": "orderConfirmation"
+    },
+    {
+      "source": "customer",
+      "name": "tracks",
+      "target": "orderStatus"
+    },
+    {
+      "source": "customer",
+      "name": "initiates",
+      "target": "returnOrExchange"
+    },
+    {
+      "source": "customerServiceRepresentative",
+      "name": "viewsAndManages",
+      "target": "order"
+    },
+    {
+      "source": "customerServiceRepresentative",
+      "name": "updates",
+      "target": "orderStatus"
+    },
+    {
+      "source": "customerServiceRepresentative",
+      "name": "providesOptionsFor",
+      "target": "returnOrExchange"
+    },
+    {
+      "source": "customerServiceRepresentative",
+      "name": "viewsHistories",
+      "target": "order"
+    },
+    {
+      "source": "warehouseStaff",
+      "name": "receivesNotificationsFor",
+      "target": "order"
+    },
+    {
+      "source": "warehouseStaff",
+      "name": "picksAndPacks",
+      "target": "product"
+    },
+    {
+      "source": "warehouseStaff",
+      "name": "updatesInventoryFor",
+      "target": "order"
+    },
+    {
+      "source": "warehouseStaff",
+      "name": "generatesShippingLabelFor",
+      "target": "order"
+    },
+    {
+      "source": "warehouseStaff",
+      "name": "notifies",
+      "target": "shippingDepartmentStaff"
+    },
+    {
+      "source": "shippingDepartmentStaff",
+      "name": "receivesNotificationsFor",
+      "target": "order"
+    },
+    {
+      "source": "shippingDepartmentStaff",
+      "name": "schedulesPickupsFor",
+      "target": "order"
+    },
+    {
+      "source": "shippingDepartmentStaff",
+      "name": "updatesShippingStatusOf",
+      "target": "order"
+    },
+    {
+      "source": "shippingDepartmentStaff",
+      "name": "printsLabelsAndSlipsFor",
+      "target": "order"
+    },
+    {
+      "source": "financeDepartmentStaff",
+      "name": "generatesInvoicesFor",
+      "target": "order"
+    },
+    {
+      "source": "financeDepartmentStaff",
+      "name": "tracksPaymentStatusFor",
+      "target": "order"
+    },
+    {
+      "source": "financeDepartmentStaff",
+      "name": "generates",
+      "target": "financialReport"
+    },
+    {
+      "source": "manager",
+      "name": "views",
+      "target": "order"
+    },
+    {
+      "source": "manager",
+      "name": "monitors",
+      "target": "orderFeedback"
+    },
+    {
+      "source": "manager",
+      "name": "managesRolesFor",
+      "target": "userRole"
+    },
+    {
+      "source": "administrator",
+      "name": "backsUp",
+      "target": "orderProcessingSystem"
+    },
+    {
+      "source": "administrator",
+      "name": "managesConfigurationsAndSettingsFor",
+      "target": "orderProcessingSystem"
+    },
+    {
+      "source": "administrator",
+      "name": "monitorsPerformanceAndSecurityFor",
+      "target": "orderProcessingSystem"
+    }
+  ]
+}
+
+--- MULTI STEP ---
+{
+  "classes": [
+    {
+      "name": "customer"
+    },
+    {
+      "name": "productCatalog"
+    },
+    {
+      "name": "product"
+    },
+    {
+      "name": "shoppingCart"
+    },
+    {
+      "name": "order"
+    },
+    {
+      "name": "shippingAddress"
+    },
+    {
+      "name": "shippingMethod"
+    },
+    {
+      "name": "discount"
+    },
+    {
+      "name": "coupon"
+    },
+    {
+      "name": "paymentDetails"
+    },
+    {
+      "name": "orderConfirmationEmail"
+    },
+    {
+      "name": "orderStatus"
+    },
+    {
+      "name": "return"
+    },
+    {
+      "name": "exchange"
+    },
+    {
+      "name": "customerServiceRepresentative"
+    },
+    {
+      "name": "warehouseStaff"
+    },
+    {
+      "name": "inventory"
+    },
+    {
+      "name": "shippingLabel"
+    },
+    {
+      "name": "shippingDepartmentStaff"
+    },
+    {
+      "name": "shippingCarrier"
+    },
+    {
+      "name": "packingSlip"
+    },
+    {
+      "name": "financeDepartmentStaff"
+    },
+    {
+      "name": "invoice"
+    },
+    {
+      "name": "paymentStatus"
+    },
+    {
+      "name": "financialReport"
+    },
+    {
+      "name": "manager"
+    },
+    {
+      "name": "userRole"
+    },
+    {
+      "name": "accessRight"
+    },
+    {
+      "name": "administrator"
+    },
+    {
+      "name": "backup"
+    },
+    {
+      "name": "systemConfiguration"
+    },
+    {
+      "name": "systemSettings"
+    },
+    {
+      "name": "systemPerformance"
+    },
+    {
+      "name": "systemSecurity"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "customer",
+      "name": "browses",
+      "target": "productCatalog"
+    },
+    {
+      "source": "customer",
+      "name": "searches",
+      "target": "productCatalog"
+    },
+    {
+      "source": "productCatalog",
+      "name": "contains",
+      "target": "product"
+    },
+    {
+      "source": "customer",
+      "name": "adds",
+      "target": "shoppingCart"
+    },
+    {
+      "source": "shoppingCart",
+      "name": "contains",
+      "target": "product"
+    },
+    {
+      "source": "customer",
+      "name": "proceeds with",
+      "target": "order"
+    },
+    {
+      "source": "customer",
+      "name": "chooses",
+      "target": "shippingAddress"
+    },
+    {
+      "source": "customer",
+      "name": "selects",
+      "target": "shippingMethod"
+    },
+    {
+      "source": "customer",
+      "name": "applies",
+      "target": "discount"
+    },
+    {
+      "source": "discount",
+      "name": "can be",
+      "target": "coupon"
+    },
+    {
+      "source": "customer",
+      "name": "provides",
+      "target": "paymentDetails"
+    },
+    {
+      "source": "customer",
+      "name": "receives",
+      "target": "orderConfirmationEmail"
+    },
+    {
+      "source": "customer",
+      "name": "tracks",
+      "target": "orderStatus"
+    },
+    {
+      "source": "customer",
+      "name": "initiates",
+      "target": "return"
+    },
+    {
+      "source": "customer",
+      "name": "initiates",
+      "target": "exchange"
+    },
+    {
+      "source": "customerServiceRepresentative",
+      "name": "manages",
+      "target": "order"
+    },
+    {
+      "source": "customerServiceRepresentative",
+      "name": "updates",
+      "target": "orderStatus"
+    },
+    {
+      "source": "customerServiceRepresentative",
+      "name": "provides",
+      "target": "refund"
+    },
+    {
+      "source": "customerServiceRepresentative",
+      "name": "provides",
+      "target": "exchange"
+    },
+    {
+      "source": "customerServiceRepresentative",
+      "name": "views",
+      "target": "order"
+    },
+    {
+      "source": "warehouseStaff",
+      "name": "receives",
+      "target": "order"
+    },
+    {
+      "source": "warehouseStaff",
+      "name": "picks",
+      "target": "product"
+    },
+    {
+      "source": "warehouseStaff",
+      "name": "updates",
+      "target": "inventory"
+    },
+    {
+      "source": "warehouseStaff",
+      "name": "generates",
+      "target": "shippingLabel"
+    },
+    {
+      "source": "warehouseStaff",
+      "name": "notifies",
+      "target": "shippingDepartmentStaff"
+    },
+    {
+      "source": "shippingDepartmentStaff",
+      "name": "receives",
+      "target": "shippingLabel"
+    },
+    {
+      "source": "shippingDepartmentStaff",
+      "name": "schedules",
+      "target": "shippingCarrier"
+    },
+    {
+      "source": "shippingDepartmentStaff",
+      "name": "updates",
+      "target": "orderStatus"
+    },
+    {
+      "source": "shippingDepartmentStaff",
+      "name": "prints",
+      "target": "packingSlip"
+    },
+    {
+      "source": "financeDepartmentStaff",
+      "name": "generates",
+      "target": "invoice"
+    },
+    {
+      "source": "financeDepartmentStaff",
+      "name": "tracks",
+      "target": "paymentStatus"
+    },
+    {
+      "source": "financeDepartmentStaff",
+      "name": "generates",
+      "target": "financialReport"
+    },
+    {
+      "source": "manager",
+      "name": "views",
+      "target": "order"
+    },
+    {
+      "source": "manager",
+      "name": "monitors",
+      "target": "customer"
+    },
+    {
+      "source": "manager",
+      "name": "manages",
+      "target": "userRole"
+    },
+    {
+      "source": "manager",
+      "name": "manages",
+      "target": "accessRight"
+    },
+    {
+      "source": "administrator",
+      "name": "backs up",
+      "target": "systemConfiguration"
+    },
+    {
+      "source": "administrator",
+      "name": "manages",
+      "target": "systemConfiguration"
+    },
+    {
+      "source": "administrator",
+      "name": "monitors",
+      "target": "systemPerformance"
+    },
+    {
+      "source": "administrator",
+      "name": "monitors",
+      "target": "systemSecurity"
+    }
+  ]
+}
+
+--- NO FEW SHOT ---
+{
+  "classes": [
+    {
+      "name": "customer"
+    },
+    {
+      "name": "product"
+    },
+    {
+      "name": "shoppingCart"
+    },
+    {
+      "name": "order"
+    },
+    {
+      "name": "shippingAddress"
+    },
+    {
+      "name": "shippingMethod"
+    },
+    {
+      "name": "discount"
+    },
+    {
+      "name": "coupon"
+    },
+    {
+      "name": "paymentDetails"
+    },
+    {
+      "name": "orderConfirmationEmail"
+    },
+    {
+      "name": "orderStatus"
+    },
+    {
+      "name": "return"
+    },
+    {
+      "name": "exchange"
+    },
+    {
+      "name": "customerServiceRepresentative"
+    },
+    {
+      "name": "warehouseStaff"
+    },
+    {
+      "name": "inventory"
+    },
+    {
+      "name": "shippingLabel"
+    },
+    {
+      "name": "shippingNotification"
+    },
+    {
+      "name": "shippingDepartmentStaff"
+    },
+    {
+      "name": "shippingCarrier"
+    },
+    {
+      "name": "packingSlip"
+    },
+    {
+      "name": "financeDepartmentStaff"
+    },
+    {
+      "name": "invoice"
+    },
+    {
+      "name": "paymentStatus"
+    },
+    {
+      "name": "financialReport"
+    },
+    {
+      "name": "manager"
+    },
+    {
+      "name": "orderFeedback"
+    },
+    {
+      "name": "userRole"
+    },
+    {
+      "name": "accessRight"
+    },
+    {
+      "name": "administrator"
+    },
+    {
+      "name": "backup"
+    },
+    {
+      "name": "systemConfiguration"
+    },
+    {
+      "name": "systemPerformance"
+    },
+    {
+      "name": "systemSecurity"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "browses",
+      "source": "customer",
+      "target": "product"
+    },
+    {
+      "name": "searches",
+      "source": "customer",
+      "target": "product"
+    },
+    {
+      "name": "viewsAvailabilityAndPricing",
+      "source": "customer",
+      "target": "product"
+    },
+    {
+      "name": "addsToCart",
+      "source": "customer",
+      "target": "product"
+    },
+    {
+      "name": "contains",
+      "source": "shoppingCart",
+      "target": "product"
+    },
+    {
+      "name": "edits",
+      "source": "customer",
+      "target": "shoppingCart"
+    },
+    {
+      "name": "proceedsToCheckout",
+      "source": "customer",
+      "target": "order"
+    },
+    {
+      "name": "chooses",
+      "source": "customer",
+      "target": "shippingAddress"
+    },
+    {
+      "name": "selects",
+      "source": "customer",
+      "target": "shippingMethod"
+    },
+    {
+      "name": "applies",
+      "source": "customer",
+      "target": "discount"
+    },
+    {
+      "name": "applies",
+      "source": "customer",
+      "target": "coupon"
+    },
+    {
+      "name": "provides",
+      "source": "customer",
+      "target": "paymentDetails"
+    },
+    {
+      "name": "receives",
+      "source": "customer",
+      "target": "orderConfirmationEmail"
+    },
+    {
+      "name": "tracks",
+      "source": "customer",
+      "target": "orderStatus"
+    },
+    {
+      "name": "initiates",
+      "source": "customer",
+      "target": "return"
+    },
+    {
+      "name": "initiates",
+      "source": "customer",
+      "target": "exchange"
+    },
+    {
+      "name": "viewsAndManages",
+      "source": "customerServiceRepresentative",
+      "target": "order"
+    },
+    {
+      "name": "updates",
+      "source": "customerServiceRepresentative",
+      "target": "orderStatus"
+    },
+    {
+      "name": "provides",
+      "source": "customerServiceRepresentative",
+      "target": "refund"
+    },
+    {
+      "name": "provides",
+      "source": "customerServiceRepresentative",
+      "target": "exchange"
+    },
+    {
+      "name": "views",
+      "source": "customerServiceRepresentative",
+      "target": "customerOrderHistory"
+    },
+    {
+      "name": "receivesNotifications",
+      "source": "warehouseStaff",
+      "target": "order"
+    },
+    {
+      "name": "picksAndPacks",
+      "source": "warehouseStaff",
+      "target": "product"
+    },
+    {
+      "name": "updates",
+      "source": "warehouseStaff",
+      "target": "inventory"
+    },
+    {
+      "name": "generates",
+      "source": "warehouseStaff",
+      "target": "shippingLabel"
+    },
+    {
+      "name": "notifies",
+      "source": "warehouseStaff",
+      "target": "shippingDepartmentStaff"
+    },
+    {
+      "name": "receives",
+      "source": "shippingDepartmentStaff",
+      "target": "shippingNotification"
+    },
+    {
+      "name": "schedules",
+      "source": "shippingDepartmentStaff",
+      "target": "shippingCarrier"
+    },
+    {
+      "name": "updates",
+      "source": "shippingDepartmentStaff",
+      "target": "shippingStatus"
+    },
+    {
+      "name": "prints",
+      "source": "shippingDepartmentStaff",
+      "target": "shippingLabel"
+    },
+    {
+      "name": "prints",
+      "source": "shippingDepartmentStaff",
+      "target": "packingSlip"
+    },
+    {
+      "name": "generates",
+      "source": "financeDepartmentStaff",
+      "target": "invoice"
+    },
+    {
+      "name": "tracks",
+      "source": "financeDepartmentStaff",
+      "target": "paymentStatus"
+    },
+    {
+      "name": "generates",
+      "source": "financeDepartmentStaff",
+      "target": "financialReport"
+    },
+    {
+      "name": "viewsStatistics",
+      "source": "manager",
+      "target": "order"
+    },
+    {
+      "name": "monitors",
+      "source": "manager",
+      "target": "orderFeedback"
+    },
+    {
+      "name": "manages",
+      "source": "manager",
+      "target": "userRole"
+    },
+    {
+      "name": "manages",
+      "source": "manager",
+      "target": "accessRight"
+    },
+    {
+      "name": "backsUpAndRestores",
+      "source": "administrator",
+      "target": "backup"
+    },
+    {
+      "name": "manages",
+      "source": "administrator",
+      "target": "systemConfiguration"
+    },
+    {
+      "name": "monitors",
+      "source": "administrator",
+      "target": "systemPerformance"
+    },
+    {
+      "name": "monitors",
+      "source": "administrator",
+      "target": "systemSecurity"
+    }
+  ]
+}
+

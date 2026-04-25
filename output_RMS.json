@@ -1,0 +1,745 @@
+--- SINGLE PROMPT ---
+{
+  "classes": [
+    {
+      "name": "cook"
+    },
+    {
+      "name": "customer"
+    },
+    {
+      "name": "manager"
+    },
+    {
+      "name": "restaurantEmployee"
+    },
+    {
+      "name": "restaurantManager"
+    },
+    {
+      "name": "waiter"
+    },
+    {
+      "name": "employee"
+    },
+    {
+      "name": "order"
+    },
+    {
+      "name": "customerOrder"
+    },
+    {
+      "name": "storeOrder"
+    },
+    {
+      "name": "ingredient"
+    },
+    {
+      "name": "menuItem"
+    },
+    {
+      "name": "dish"
+    },
+    {
+      "name": "comment"
+    },
+    {
+      "name": "shift"
+    },
+    {
+      "name": "inventory"
+    },
+    {
+      "name": "salesReport"
+    },
+    {
+      "name": "contactInfo"
+    },
+    {
+      "name": "note"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "cook",
+      "name": "creates",
+      "target": "customerOrder"
+    },
+    {
+      "source": "customer",
+      "name": "commentsOn",
+      "target": "dish"
+    },
+    {
+      "source": "customer",
+      "name": "views",
+      "target": "ingredient"
+    },
+    {
+      "source": "customer",
+      "name": "views",
+      "target": "menuItem"
+    },
+    {
+      "source": "customer",
+      "name": "views",
+      "target": "dish"
+    },
+    {
+      "source": "manager",
+      "name": "manages",
+      "target": "employee"
+    },
+    {
+      "source": "manager",
+      "name": "views",
+      "target": "order"
+    },
+    {
+      "source": "manager",
+      "name": "updates",
+      "target": "menuItem"
+    },
+    {
+      "source": "restaurantEmployee",
+      "name": "views",
+      "target": "order"
+    },
+    {
+      "source": "restaurantManager",
+      "name": "views",
+      "target": "inventory"
+    },
+    {
+      "source": "restaurantManager",
+      "name": "views",
+      "target": "salesReport"
+    },
+    {
+      "source": "waiter",
+      "name": "addsNoteTo",
+      "target": "order"
+    },
+    {
+      "source": "employee",
+      "name": "views",
+      "target": "customerOrder"
+    },
+    {
+      "source": "employee",
+      "name": "views",
+      "target": "storeOrder"
+    },
+    {
+      "source": "employee",
+      "name": "manages",
+      "target": "order"
+    },
+    {
+      "source": "employee",
+      "name": "adds",
+      "target": "contactInfo"
+    },
+    {
+      "source": "employee",
+      "name": "addsNoteTo",
+      "target": "order"
+    },
+    {
+      "source": "employee",
+      "name": "views",
+      "target": "menuItem"
+    },
+    {
+      "source": "employee",
+      "name": "views",
+      "target": "shift"
+    }
+  ]
+}
+
+--- MULTI STEP ---
+{
+  "classes": [
+    {
+      "name": "cook"
+    },
+    {
+      "name": "customer"
+    },
+    {
+      "name": "manager"
+    },
+    {
+      "name": "restaurantEmployee"
+    },
+    {
+      "name": "restaurantManager"
+    },
+    {
+      "name": "waiter"
+    },
+    {
+      "name": "employee"
+    },
+    {
+      "name": "customerOrder"
+    },
+    {
+      "name": "comments"
+    },
+    {
+      "name": "allergyList"
+    },
+    {
+      "name": "dishIngredients"
+    },
+    {
+      "name": "expiryDate"
+    },
+    {
+      "name": "storeOrder"
+    },
+    {
+      "name": "shift"
+    },
+    {
+      "name": "itemList"
+    },
+    {
+      "name": "order"
+    },
+    {
+      "name": "employeeData"
+    },
+    {
+      "name": "stock"
+    },
+    {
+      "name": "menu"
+    },
+    {
+      "name": "inventory"
+    },
+    {
+      "name": "sales"
+    },
+    {
+      "name": "employeeInformation"
+    },
+    {
+      "name": "reports"
+    },
+    {
+      "name": "notes"
+    },
+    {
+      "name": "contactInformation"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "cook",
+      "name": "creates",
+      "target": "customerOrder"
+    },
+    {
+      "source": "customer",
+      "name": "gives",
+      "target": "comments"
+    },
+    {
+      "source": "customer",
+      "name": "views",
+      "target": "allergyList"
+    },
+    {
+      "source": "customer",
+      "name": "views",
+      "target": "dishIngredients"
+    },
+    {
+      "source": "customer",
+      "name": "views",
+      "target": "expiryDate"
+    },
+    {
+      "source": "manager",
+      "name": "adds",
+      "target": "storeOrder"
+    },
+    {
+      "source": "manager",
+      "name": "changes",
+      "target": "shift"
+    },
+    {
+      "source": "manager",
+      "name": "changes",
+      "target": "itemList"
+    },
+    {
+      "source": "manager",
+      "name": "deletes",
+      "target": "storeOrder"
+    },
+    {
+      "source": "manager",
+      "name": "displays",
+      "target": "order"
+    },
+    {
+      "source": "manager",
+      "name": "edits",
+      "target": "storeOrder"
+    },
+    {
+      "source": "manager",
+      "name": "edits",
+      "target": "employeeData"
+    },
+    {
+      "source": "manager",
+      "name": "reads",
+      "target": "employeeData"
+    },
+    {
+      "source": "manager",
+      "name": "views",
+      "target": "comments"
+    },
+    {
+      "source": "manager",
+      "name": "views",
+      "target": "stock"
+    },
+    {
+      "source": "manager",
+      "name": "sees",
+      "target": "order"
+    },
+    {
+      "source": "manager",
+      "name": "views",
+      "target": "stock"
+    },
+    {
+      "source": "manager",
+      "name": "updates",
+      "target": "menu"
+    },
+    {
+      "source": "restaurantEmployee",
+      "name": "sees",
+      "target": "order"
+    },
+    {
+      "source": "restaurantManager",
+      "name": "knows",
+      "target": "inventory"
+    },
+    {
+      "source": "restaurantManager",
+      "name": "knows",
+      "target": "sales"
+    },
+    {
+      "source": "restaurantManager",
+      "name": "views",
+      "target": "employeeInformation"
+    },
+    {
+      "source": "restaurantManager",
+      "name": "views",
+      "target": "reports"
+    },
+    {
+      "source": "waiter",
+      "name": "adds",
+      "target": "notes"
+    },
+    {
+      "source": "waiter",
+      "name": "sees",
+      "target": "order"
+    },
+    {
+      "source": "waiter",
+      "name": "sees",
+      "target": "customerOrder"
+    },
+    {
+      "source": "employee",
+      "name": "adds",
+      "target": "customerOrder"
+    },
+    {
+      "source": "employee",
+      "name": "adds",
+      "target": "storeOrder"
+    },
+    {
+      "source": "employee",
+      "name": "adds",
+      "target": "contactInformation"
+    },
+    {
+      "source": "employee",
+      "name": "deletes",
+      "target": "customerOrder"
+    },
+    {
+      "source": "employee",
+      "name": "deletes",
+      "target": "storeOrder"
+    },
+    {
+      "source": "employee",
+      "name": "edits",
+      "target": "customerOrder"
+    },
+    {
+      "source": "employee",
+      "name": "edits",
+      "target": "storeOrder"
+    },
+    {
+      "source": "employee",
+      "name": "edits",
+      "target": "contactInformation"
+    },
+    {
+      "source": "employee",
+      "name": "adds",
+      "target": "notes"
+    },
+    {
+      "source": "employee",
+      "name": "marks",
+      "target": "shift"
+    },
+    {
+      "source": "employee",
+      "name": "sees",
+      "target": "customerOrder"
+    },
+    {
+      "source": "employee",
+      "name": "sees",
+      "target": "storeOrder"
+    },
+    {
+      "source": "employee",
+      "name": "views",
+      "target": "menu"
+    },
+    {
+      "source": "employee",
+      "name": "sees",
+      "target": "dishIngredients"
+    },
+    {
+      "source": "employee",
+      "name": "sees",
+      "target": "stock"
+    }
+  ]
+}
+
+--- NO FEW SHOT ---
+{
+  "classes": [
+    {
+      "name": "cook"
+    },
+    {
+      "name": "customer"
+    },
+    {
+      "name": "manager"
+    },
+    {
+      "name": "restaurantEmployee"
+    },
+    {
+      "name": "waiter"
+    },
+    {
+      "name": "employee"
+    },
+    {
+      "name": "customerOrder"
+    },
+    {
+      "name": "storeOrder"
+    },
+    {
+      "name": "comment"
+    },
+    {
+      "name": "dish"
+    },
+    {
+      "name": "allergyList"
+    },
+    {
+      "name": "ingredient"
+    },
+    {
+      "name": "expiryDate"
+    },
+    {
+      "name": "shift"
+    },
+    {
+      "name": "itemList"
+    },
+    {
+      "name": "order"
+    },
+    {
+      "name": "orderDate"
+    },
+    {
+      "name": "stock"
+    },
+    {
+      "name": "menu"
+    },
+    {
+      "name": "inventory"
+    },
+    {
+      "name": "sales"
+    },
+    {
+      "name": "employeeInformation"
+    },
+    {
+      "name": "report"
+    },
+    {
+      "name": "note"
+    },
+    {
+      "name": "contactInformation"
+    },
+    {
+      "name": "timeEntry"
+    },
+    {
+      "name": "drink"
+    },
+    {
+      "name": "food"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "creates",
+      "source": "cook",
+      "target": "customerOrder"
+    },
+    {
+      "name": "writes",
+      "source": "customer",
+      "target": "comment"
+    },
+    {
+      "name": "reviews",
+      "source": "customer",
+      "target": "allergyList"
+    },
+    {
+      "name": "reviews",
+      "source": "customer",
+      "target": "ingredient"
+    },
+    {
+      "name": "reviews",
+      "source": "customer",
+      "target": "expiryDate"
+    },
+    {
+      "name": "adds",
+      "source": "manager",
+      "target": "storeOrder"
+    },
+    {
+      "name": "changes",
+      "source": "manager",
+      "target": "shift"
+    },
+    {
+      "name": "modifies",
+      "source": "manager",
+      "target": "itemList"
+    },
+    {
+      "name": "deletes",
+      "source": "manager",
+      "target": "storeOrder"
+    },
+    {
+      "name": "displays",
+      "source": "manager",
+      "target": "orderDate"
+    },
+    {
+      "name": "edits",
+      "source": "manager",
+      "target": "storeOrder"
+    },
+    {
+      "name": "reads",
+      "source": "manager",
+      "target": "employeeInformation"
+    },
+    {
+      "name": "reviews",
+      "source": "manager",
+      "target": "comment"
+    },
+    {
+      "name": "reviews",
+      "source": "manager",
+      "target": "stock"
+    },
+    {
+      "name": "counts",
+      "source": "manager",
+      "target": "order"
+    },
+    {
+      "name": "reviews",
+      "source": "manager",
+      "target": "inventory"
+    },
+    {
+      "name": "modifies",
+      "source": "manager",
+      "target": "menu"
+    },
+    {
+      "name": "reviews",
+      "source": "restaurantEmployee",
+      "target": "order"
+    },
+    {
+      "name": "assesses",
+      "source": "restaurantManager",
+      "target": "inventory"
+    },
+    {
+      "name": "assesses",
+      "source": "restaurantManager",
+      "target": "sales"
+    },
+    {
+      "name": "reviews",
+      "source": "restaurantManager",
+      "target": "employeeInformation"
+    },
+    {
+      "name": "reviews",
+      "source": "restaurantManager",
+      "target": "report"
+    },
+    {
+      "name": "adds",
+      "source": "waiter",
+      "target": "note"
+    },
+    {
+      "name": "displays",
+      "source": "waiter",
+      "target": "order"
+    },
+    {
+      "name": "counts",
+      "source": "waiter",
+      "target": "order"
+    },
+    {
+      "name": "adds",
+      "source": "employee",
+      "target": "customerOrder"
+    },
+    {
+      "name": "adds",
+      "source": "employee",
+      "target": "storeOrder"
+    },
+    {
+      "name": "updates",
+      "source": "employee",
+      "target": "contactInformation"
+    },
+    {
+      "name": "deletes",
+      "source": "employee",
+      "target": "customerOrder"
+    },
+    {
+      "name": "deletes",
+      "source": "employee",
+      "target": "storeOrder"
+    },
+    {
+      "name": "edits",
+      "source": "employee",
+      "target": "customerOrder"
+    },
+    {
+      "name": "edits",
+      "source": "employee",
+      "target": "storeOrder"
+    },
+    {
+      "name": "records",
+      "source": "employee",
+      "target": "note"
+    },
+    {
+      "name": "records",
+      "source": "employee",
+      "target": "timeEntry"
+    },
+    {
+      "name": "reviews",
+      "source": "employee",
+      "target": "customerOrder"
+    },
+    {
+      "name": "reviews",
+      "source": "employee",
+      "target": "storeOrder"
+    },
+    {
+      "name": "reviews",
+      "source": "employee",
+      "target": "drink"
+    },
+    {
+      "name": "reviews",
+      "source": "employee",
+      "target": "food"
+    },
+    {
+      "name": "reviews",
+      "source": "employee",
+      "target": "shift"
+    },
+    {
+      "name": "reviews",
+      "source": "employee",
+      "target": "menu"
+    },
+    {
+      "name": "reviews",
+      "source": "employee",
+      "target": "stock"
+    }
+  ]
+}
+

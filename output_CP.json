@@ -1,0 +1,930 @@
+--- SINGLE PROMPT ---
+{
+  "classes": [
+    {
+      "name": "camper"
+    },
+    {
+      "name": "campAdministrator"
+    },
+    {
+      "name": "consentForm"
+    },
+    {
+      "name": "activity"
+    },
+    {
+      "name": "nametag"
+    },
+    {
+      "name": "staffMember"
+    },
+    {
+      "name": "task"
+    },
+    {
+      "name": "rule"
+    },
+    {
+      "name": "facility"
+    },
+    {
+      "name": "feedback"
+    },
+    {
+      "name": "emergencyInfo"
+    },
+    {
+      "name": "parentGuardianInfo"
+    },
+    {
+      "name": "medicalForm"
+    },
+    {
+      "name": "attendance"
+    },
+    {
+      "name": "parent"
+    },
+    {
+      "name": "group"
+    },
+    {
+      "name": "event"
+    },
+    {
+      "name": "payment"
+    },
+    {
+      "name": "photo"
+    },
+    {
+      "name": "staff"
+    },
+    {
+      "name": "campWorker"
+    },
+    {
+      "name": "campCounselor"
+    },
+    {
+      "name": "report"
+    },
+    {
+      "name": "supply"
+    },
+    {
+      "name": "repair"
+    },
+    {
+      "name": "account"
+    },
+    {
+      "name": "message"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "campAdministrator",
+      "name": "add",
+      "target": "camper"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "remove",
+      "target": "camper"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "store",
+      "target": "camper"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "upload",
+      "target": "consentForm"
+    },
+    {
+      "source": "camper",
+      "name": "hasSubmitted",
+      "target": "consentForm"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "schedule",
+      "target": "activity"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "create",
+      "target": "nametag"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "suspend",
+      "target": "camper"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "set",
+      "target": "task"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "assign",
+      "target": "staffMember"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "warn",
+      "target": "campWorker"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "create",
+      "target": "rule"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "trackUsage",
+      "target": "facility"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "receive",
+      "target": "feedback"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "store",
+      "target": "emergencyInfo"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "store",
+      "target": "parentGuardianInfo"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "provide",
+      "target": "feedback"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "create",
+      "target": "registrationForm"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "see",
+      "target": "medicalForm"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "notify",
+      "target": "parent"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "log",
+      "target": "attendance"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "add",
+      "target": "parent"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "create",
+      "target": "group"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "scheduleEvents",
+      "target": "event"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "modify",
+      "target": "event"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "delete",
+      "target": "event"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "modify",
+      "target": "camper"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "modify",
+      "target": "parent"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "delete",
+      "target": "parent"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "modify",
+      "target": "group"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "see",
+      "target": "event"
+    },
+    {
+      "source": "parent",
+      "name": "submit",
+      "target": "consentForm"
+    },
+    {
+      "source": "parent",
+      "name": "track",
+      "target": "activity"
+    },
+    {
+      "source": "parent",
+      "name": "create",
+      "target": "account"
+    },
+    {
+      "source": "parent",
+      "name": "seeCounselors",
+      "target": "campCounselor"
+    },
+    {
+      "source": "parent",
+      "name": "message",
+      "target": "campCounselor"
+    },
+    {
+      "source": "parent",
+      "name": "makePayment",
+      "target": "payment"
+    },
+    {
+      "source": "parent",
+      "name": "share",
+      "target": "photo"
+    },
+    {
+      "source": "parent",
+      "name": "enroll",
+      "target": "camper"
+    },
+    {
+      "source": "campWorker",
+      "name": "report",
+      "target": "camper"
+    },
+    {
+      "source": "campWorker",
+      "name": "report",
+      "target": "supply"
+    },
+    {
+      "source": "campWorker",
+      "name": "report",
+      "target": "repair"
+    },
+    {
+      "source": "campCounselor",
+      "name": "takeAttendance",
+      "target": "camper"
+    }
+  ]
+}
+
+--- MULTI STEP ---
+{
+  "classes": [
+    {
+      "name": "campAdministrator"
+    },
+    {
+      "name": "camper"
+    },
+    {
+      "name": "parent"
+    },
+    {
+      "name": "campWorker"
+    },
+    {
+      "name": "campCounselor"
+    },
+    {
+      "name": "consentForm"
+    },
+    {
+      "name": "activity"
+    },
+    {
+      "name": "nametag"
+    },
+    {
+      "name": "reminder"
+    },
+    {
+      "name": "staffPosition"
+    },
+    {
+      "name": "warning"
+    },
+    {
+      "name": "rule"
+    },
+    {
+      "name": "facilityUsage"
+    },
+    {
+      "name": "feedback"
+    },
+    {
+      "name": "emergencyInformation"
+    },
+    {
+      "name": "parentGuardianInformation"
+    },
+    {
+      "name": "registrationForm"
+    },
+    {
+      "name": "medicalForm"
+    },
+    {
+      "name": "attendance"
+    },
+    {
+      "name": "campGroup"
+    },
+    {
+      "name": "event"
+    },
+    {
+      "name": "task"
+    },
+    {
+      "name": "account"
+    },
+    {
+      "name": "schedule"
+    },
+    {
+      "name": "completionReport"
+    },
+    {
+      "name": "supplyReport"
+    },
+    {
+      "name": "repairReport"
+    },
+    {
+      "name": "payment"
+    },
+    {
+      "name": "photo"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "campAdministrator",
+      "name": "adds",
+      "target": "camper"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "removes",
+      "target": "camper"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "uploads",
+      "target": "consentForm"
+    },
+    {
+      "source": "camper",
+      "name": "submits",
+      "target": "consentForm"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "schedules",
+      "target": "activity"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "creates",
+      "target": "nametag"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "suspends",
+      "target": "camper"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "assigns",
+      "target": "staffPosition"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "warns",
+      "target": "campWorker"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "creates",
+      "target": "rule"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "modifies",
+      "target": "rule"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "uses",
+      "target": "facilityUsage"
+    },
+    {
+      "source": "parent",
+      "name": "submits",
+      "target": "feedback"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "stores",
+      "target": "emergencyInformation"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "stores",
+      "target": "parentGuardianInformation"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "provides",
+      "target": "feedback"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "logs",
+      "target": "attendance"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "creates",
+      "target": "registrationForm"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "adds",
+      "target": "parent"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "creates",
+      "target": "campGroup"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "adds",
+      "target": "camper"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "schedules",
+      "target": "event"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "modifies",
+      "target": "task"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "deletes",
+      "target": "task"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "modifies",
+      "target": "camper"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "modifies",
+      "target": "parent"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "deletes",
+      "target": "parent"
+    },
+    {
+      "source": "campAdministrator",
+      "name": "modifies",
+      "target": "campGroup"
+    },
+    {
+      "source": "parent",
+      "name": "creates",
+      "target": "account"
+    },
+    {
+      "source": "parent",
+      "name": "submits",
+      "target": "consentForm"
+    },
+    {
+      "source": "parent",
+      "name": "enrolls",
+      "target": "camper"
+    },
+    {
+      "source": "parent",
+      "name": "views",
+      "target": "schedule"
+    },
+    {
+      "source": "campCounselor",
+      "name": "takes",
+      "target": "attendance"
+    },
+    {
+      "source": "campWorker",
+      "name": "submits",
+      "target": "completionReport"
+    },
+    {
+      "source": "campWorker",
+      "name": "reports",
+      "target": "supplyReport"
+    },
+    {
+      "source": "campWorker",
+      "name": "reports",
+      "target": "repairReport"
+    },
+    {
+      "source": "parent",
+      "name": "makes",
+      "target": "payment"
+    },
+    {
+      "source": "parent",
+      "name": "shares",
+      "target": "photo"
+    }
+  ]
+}
+
+--- NO FEW SHOT ---
+{
+  "classes": [
+    {
+      "name": "campAdministrator"
+    },
+    {
+      "name": "camper"
+    },
+    {
+      "name": "consentForm"
+    },
+    {
+      "name": "activity"
+    },
+    {
+      "name": "nameTag"
+    },
+    {
+      "name": "task"
+    },
+    {
+      "name": "staffMember"
+    },
+    {
+      "name": "position"
+    },
+    {
+      "name": "rule"
+    },
+    {
+      "name": "facility"
+    },
+    {
+      "name": "feedback"
+    },
+    {
+      "name": "emergencyInformation"
+    },
+    {
+      "name": "parentGuardian"
+    },
+    {
+      "name": "registrationForm"
+    },
+    {
+      "name": "medicalForm"
+    },
+    {
+      "name": "attendance"
+    },
+    {
+      "name": "parent"
+    },
+    {
+      "name": "campGroup"
+    },
+    {
+      "name": "eventCalendar"
+    },
+    {
+      "name": "consentFormSubmission"
+    },
+    {
+      "name": "childActivitySchedule"
+    },
+    {
+      "name": "account"
+    },
+    {
+      "name": "payment"
+    },
+    {
+      "name": "photoGallery"
+    },
+    {
+      "name": "emergencyContact"
+    },
+    {
+      "name": "message"
+    },
+    {
+      "name": "completionReport"
+    },
+    {
+      "name": "supplyReport"
+    },
+    {
+      "name": "repairReport"
+    },
+    {
+      "name": "campWorker"
+    },
+    {
+      "name": "campCounselor"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "adds",
+      "source": "campAdministrator",
+      "target": "camper"
+    },
+    {
+      "name": "removes",
+      "source": "campAdministrator",
+      "target": "camper"
+    },
+    {
+      "name": "uploads",
+      "source": "campAdministrator",
+      "target": "consentForm"
+    },
+    {
+      "name": "submits",
+      "source": "camper",
+      "target": "consentForm"
+    },
+    {
+      "name": "scheduledFor",
+      "source": "activity",
+      "target": "camper"
+    },
+    {
+      "name": "creates",
+      "source": "campAdministrator",
+      "target": "nameTag"
+    },
+    {
+      "name": "suspends",
+      "source": "campAdministrator",
+      "target": "camper"
+    },
+    {
+      "name": "sets",
+      "source": "campAdministrator",
+      "target": "task"
+    },
+    {
+      "name": "assigns",
+      "source": "campAdministrator",
+      "target": "position"
+    },
+    {
+      "name": "warns",
+      "source": "campAdministrator",
+      "target": "staffMember"
+    },
+    {
+      "name": "creates",
+      "source": "campAdministrator",
+      "target": "rule"
+    },
+    {
+      "name": "tracksUsage",
+      "source": "campAdministrator",
+      "target": "facility"
+    },
+    {
+      "name": "submits",
+      "source": "parent",
+      "target": "feedback"
+    },
+    {
+      "name": "stores",
+      "source": "campAdministrator",
+      "target": "emergencyInformation"
+    },
+    {
+      "name": "stores",
+      "source": "campAdministrator",
+      "target": "parentGuardian"
+    },
+    {
+      "name": "providesFeedbackTo",
+      "source": "campAdministrator",
+      "target": "parent"
+    },
+    {
+      "name": "creates",
+      "source": "campAdministrator",
+      "target": "registrationForm"
+    },
+    {
+      "name": "views",
+      "source": "campAdministrator",
+      "target": "medicalForm"
+    },
+    {
+      "name": "notifies",
+      "source": "campAdministrator",
+      "target": "parent"
+    },
+    {
+      "name": "logs",
+      "source": "campAdministrator",
+      "target": "attendance"
+    },
+    {
+      "name": "adds",
+      "source": "campAdministrator",
+      "target": "parent"
+    },
+    {
+      "name": "creates",
+      "source": "campAdministrator",
+      "target": "campGroup"
+    },
+    {
+      "name": "addsTo",
+      "source": "campAdministrator",
+      "target": "campGroup"
+    },
+    {
+      "name": "views",
+      "source": "campAdministrator",
+      "target": "eventCalendar"
+    },
+    {
+      "name": "schedules",
+      "source": "campAdministrator",
+      "target": "task"
+    },
+    {
+      "name": "deletes",
+      "source": "campAdministrator",
+      "target": "task"
+    },
+    {
+      "name": "modifies",
+      "source": "campAdministrator",
+      "target": "task"
+    },
+    {
+      "name": "modifies",
+      "source": "campAdministrator",
+      "target": "camper"
+    },
+    {
+      "name": "modifies",
+      "source": "campAdministrator",
+      "target": "parent"
+    },
+    {
+      "name": "deletes",
+      "source": "campAdministrator",
+      "target": "parent"
+    },
+    {
+      "name": "modifies",
+      "source": "campAdministrator",
+      "target": "campGroup"
+    },
+    {
+      "name": "views",
+      "source": "parent",
+      "target": "consentFormSubmission"
+    },
+    {
+      "name": "tracks",
+      "source": "parent",
+      "target": "childActivitySchedule"
+    },
+    {
+      "name": "submits",
+      "source": "parent",
+      "target": "consentForm"
+    },
+    {
+      "name": "creates",
+      "source": "parent",
+      "target": "account"
+    },
+    {
+      "name": "sees",
+      "source": "parent",
+      "target": "campCounselor"
+    },
+    {
+      "name": "messages",
+      "source": "parent",
+      "target": "campCounselor"
+    },
+    {
+      "name": "sees",
+      "source": "parent",
+      "target": "payment"
+    },
+    {
+      "name": "shares",
+      "source": "parent",
+      "target": "photoGallery"
+    },
+    {
+      "name": "contacts",
+      "source": "parent",
+      "target": "emergencyContact"
+    },
+    {
+      "name": "enrolls",
+      "source": "parent",
+      "target": "camper"
+    },
+    {
+      "name": "sees",
+      "source": "parent",
+      "target": "campGroup"
+    },
+    {
+      "name": "sees",
+      "source": "campWorker",
+      "target": "camper"
+    },
+    {
+      "name": "submits",
+      "source": "campWorker",
+      "target": "completionReport"
+    },
+    {
+      "name": "reports",
+      "source": "campWorker",
+      "target": "camper"
+    },
+    {
+      "name": "reports",
+      "source": "campWorker",
+      "target": "supplyReport"
+    },
+    {
+      "name": "reports",
+      "source": "campWorker",
+      "target": "repairReport"
+    },
+    {
+      "name": "takes",
+      "source": "campCounselor",
+      "target": "attendance"
+    }
+  ]
+}
+
