@@ -1,7 +1,11 @@
 panel~=1.8.1
 graphviz~=0.21
 pandas~=2.3.2
-openai~=1.109.1
+openai~=2.8.1
 requests~=2.32.5
 matplotlib~=3.10.7
 numpy~=2.3.3
+regex~=2025.11.3
+openpyxl~=3.1.5
+sentence-transformers~=5.4.1
+scikit-learn~=1.8.0
