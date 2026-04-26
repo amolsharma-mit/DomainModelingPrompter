@@ -61,20 +61,40 @@ def match_classes(pred, gt):
 # 📊 RELATIONSHIP MATCHING (TRIPLE-LEVEL)
 # ---------------------------
 
+# def match_relationships(pred, gt):
+#     matched = 0
+#     used = set()
+#
+#     for ps, pr, pt in pred:
+#         for i, (gs, gr, gt_) in enumerate(gt):
+#             if i in used:
+#                 continue
+#
+#             if (
+#                 match_text(ps, gs) and
+#                 match_text(pr, gr) and
+#                 match_text(pt, gt_)
+#             ):
+#                 matched += 1
+#                 used.add(i)
+#                 break
+#
+#     return matched
+
 def match_relationships(pred, gt):
     matched = 0
     used = set()
 
-    for ps, pr, pt in pred:
-        for i, (gs, gr, gt_) in enumerate(gt):
+    # Convert triples to sentences
+    pred_texts = [f"{ps} {pr} {pt}" for ps, pr, pt in pred]
+    gt_texts = [f"{gs} {gr} {gt_}" for gs, gr, gt_ in gt]
+
+    for p in pred_texts:
+        for i, g in enumerate(gt_texts):
             if i in used:
                 continue
 
-            if (
-                match_text(ps, gs) and
-                match_text(pr, gr) and
-                match_text(pt, gt_)
-            ):
+            if match_text(p, g):   # semantic similarity
                 matched += 1
                 used.add(i)
                 break
